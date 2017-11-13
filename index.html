@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+		
+/* Style the header */
+.header {
+    padding: 20px;
+	  position: relative;
+    text-align: center;
+    color: white;
+}
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #4286f4;
+}
+/* Style the topnav links */
+.topnav a {
+    float: left;
+	  font-family:'Times New Roman','Helvetica', 'Arial', 'Sans-Serif';
+	  font-size: 18px;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #8cb8ff;
+    color: black;
+}
+		
+		
+		
+		
+/* General CSS RUles */
+    body {
+    margin: 0 auto;
+    width: 70%;
+	  font-family:'Times New Roman','Helvetica', 'Arial', 'Sans-Serif';
+		}
+
+		p {
+    font-size: 1.2em;
+    line-height: 1.2em;
+    color: rgb(0, 0, 0);
+		}
+	
+		img {
+		max-width:100%
+		}
+		
+		h1{
+				font-size: 2.2em;
+			  text-align: center;
+		}
+		
+.ctr1{
+text-align: center;
+}
+
+.breakfloat
+{
+	padding-top: 2cm;
+	clear: left;
+}
+		
+.pad-short-bottom{padding-bottom: 2cm;}
+.pad-short-top{padding-top: 2cm;}
+		
+#rps{
+font-size: 1.4em;
+line-height: 1.4em;
+}
+
+/* CSS for Button */
+.button {
+    background-color: #4286f4;
+	  font-family:'Times New Roman','Helvetica', 'Arial', 'Sans-Serif';
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+}
+		
+		
+/* CSS for custom form */
+input[type=button], input[type=submit], input[type=reset] 
+{
+    background-color: #4286f4;
+	  font-family:'Times New Roman','Helvetica', 'Arial', 'Sans-Serif';
+    font-size: 18px;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+}
+input[type=text] 
+{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+/*CSS to create rounded Images*/
+		.roundImg {
+  border-radius: 50%;
+	padding: 25px;
+	box-sizing: border-box;
+}
+
+		
+		
+/*CSS for Text overlay on Images*/
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.center-left {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+		
+		
+/* Create three equal columns that floats next to each other */
+* {
+    box-sizing: border-box;
+}
+		
+.column1 {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+}
+
+.column2 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+		
+		
+/*CSS for Animated Cards*/
+#f1_container {
+	float:left;
+	text-align:center;
+  position: relative;
+  margin: 10px auto;
+  width: 600px;
+  height: 230px;
+  z-index: 1;
+}
+#f1_container {
+  perspective: 1000;
+}
+#f1_card {
+  width: 33.33%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 1.0s linear;
+}
+#f1_container:hover #f1_card {
+  transform: rotateY(180deg);
+  box-shadow: -5px 5px 5px #aaa;
+}
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+	border: 10px solid transparent;
+  padding: 15px;
+  -webkit-border-image: url(https://user-images.githubusercontent.com/28896529/32695379-08a8ee0a-c728-11e7-8ddd-64cda0bfb135.png) round; /* Safari 3.1-5 */
+  -o-border-image: url(https://user-images.githubusercontent.com/28896529/32695379-08a8ee0a-c728-11e7-8ddd-64cda0bfb135.png) round; /* Opera 11-12.1 */
+   border-image: url(https://user-images.githubusercontent.com/28896529/32695379-08a8ee0a-c728-11e7-8ddd-64cda0bfb135.png) round;
+   border-image-slice: 30%;
+  backface-visibility: hidden;
+}
+.face.back {
+  display: block;
+	vertical-align:middle;
+
+  transform: rotateY(180deg);
+	border: 8px solid #4286f4;
+  box-sizing: border-box;
+  padding: 10px;
+  color: white;
+}
+		
+		
+/* CSS for single repeated image as boarder*/
+.wreath {
+	  border: 10px solid transparent;
+    padding: 15px;
+    -webkit-border-image: url(https://user-images.githubusercontent.com/28896529/32695379-08a8ee0a-c728-11e7-8ddd-64cda0bfb135.png) round; /* Safari 3.1-5 */
+    -o-border-image: url(https://user-images.githubusercontent.com/28896529/32695379-08a8ee0a-c728-11e7-8ddd-64cda0bfb135.png) round; /* Opera 11-12.1 */
+    border-image: url(https://user-images.githubusercontent.com/28896529/32695379-08a8ee0a-c728-11e7-8ddd-64cda0bfb135.png) round;
+    border-image-slice: 30%;
+} 
+
+.blue-circle {
+	  border: 10px solid transparent;
+    padding: 15px;
+    -webkit-border-image: url(https://user-images.githubusercontent.com/28896529/32695440-1f01f5c8-c72a-11e7-949e-2494b3332ee3.png) round; /* Safari 3.1-5 */
+    -o-border-image: url(https://user-images.githubusercontent.com/28896529/32695440-1f01f5c8-c72a-11e7-949e-2494b3332ee3.png) round; /* Opera 11-12.1 */
+    border-image: url(https://user-images.githubusercontent.com/28896529/32695440-1f01f5c8-c72a-11e7-949e-2494b3332ee3.png) round;
+    border-image-slice: 20%;
+} 
+		
+/* CSS for Photo Gallery */
+.container-gallery {
+  position: relative;
+  width: 33.33%;
+	padding: 15px;
+  float:left
+}
+.image-gallery {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #4286f4;
+}
+.container-gallery:hover .overlay {
+  opacity: 1;
+}
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+	
+}
+		
+		
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="https://user-images.githubusercontent.com/28896529/32686045-a2507482-c66b-11e7-8493-8686c3802e8d.jpg" alt="Switzerland" width=100%>
+<div class="center-left"><h2>Anne Freeman<br>Computer Science<br>Georgetown University '19</h2></div>
+</div>
+
+<div class="topnav">
+  <a href="#aboutme">About</a>
+  <a href="#education">Education</a>
+  <a href="#research-projects">Research Projects</a>
+	<a href="#contact-me">Contact Me</a>
+</div>
+
+
+
+<p class="pad-short-top"></p>
+<a name="aboutme"></a> 
+<h1> <strong> About </strong> </h1>
+<img  class="roundImg" src="https://user-images.githubusercontent.com/28896529/32686274-cc42a48c-c66f-11e7-8e04-8e6a9cac5728.jpg" alt="Headshot of Anne Freeman" style="float:left;width:50%;">
+		 <p>
+		I grew up in a small tow in Western Massachusetts with my three siblings. I went to my local high school before heading off to 
+		Georgetown Univeristy where I am currently studying Computer Science.
+	</p>
+<p>
+	My first research experience was at the Penn Center for Women's Behavioral Wellness,
+	where I had the opportunity to assist on various protocols regarding female hormones and their effects on health. 
+	Additionally, I pursued an independent research project reviewing protocols passed by the University of Pennsylvania IRB to determine the inclusion of sex and gender in the research plan. 
+	I authored a manuscript of the results which was recently published in Biology of Sex Differences.
+	</p>
+<p>
+	I am interested in ways technology can be used to improve the healthcare system. 
+	During the summer of 2017, I participated in a Research Experience for Undergraduates in Health Informatics at Indiana University to explore this interest. 
+	I assisted in selecting and modifying components to form an electronic toolkit for older adults.
+	</p>
+	
+<p class="pad-short-top"></p>
+<a name="education"></a> 
+<h1> <strong> Education </strong> </h1> 
+<div class="row">
+  <div class="column1">
+    <div id="f1_container">
+<div id="f1_card" class="shadow">
+  <div class="front face">
+		<img src="https://user-images.githubusercontent.com/28896529/32694883-05071140-c71a-11e7-9a60-23da3304d041.jpg" width=150%/>
+  </div>
+  <div class="back face center">
+		<p><strong>Georgetown University</strong></p>
+	<p>2015 - 2019</p>
+		<p>BS in Computer Science</p>
+  </div>
+</div>
+</div>
+</div>
+	
+  <div class="column1">
+ <div id="f1_container">
+<div id="f1_card" class="shadow">
+  <div class="front face">
+	<img src="https://user-images.githubusercontent.com/28896529/32694786-4a08ad74-c717-11e7-979a-12dd56a582c2.png" width=100%/>
+  </div>
+  <div class="back face center ">
+	<p><strong>Longmeadow High School</strong></p>
+	<p>Longmeadow, MA</p>
+	<p>2011 - 2015</p>
+  </div>
+</div>
+</div>
+  </div>
+	
+  <div class="column1">
+    <div id="f1_container">
+<div id="f1_card" class="shadow">
+  <div class="front face">
+    <img src="https://user-images.githubusercontent.com/28896529/32694810-03be87de-c718-11e7-915a-eaedf8acc68d.jpg" width=100%/>
+  </div>
+  <div class="back face center">
+		<p><strong>Swiss Semester</strong></p>
+		<p>Zermatt, Switzerland</p>
+		<p>September - December 2012</p> 
+  </div>
+</div>
+</div>
+</div>
+	<p class="pad-short-top"></p>
+	
+	
+<a name="research-projects"></a> 
+<h1 class="pad-short-top"> <strong> Research Projects </strong> </h1> 
+	<h2>Health Informatics Research Experience for Undergraduates</h2>
+	<p id="rps">Indiana University - Summer 2017</p>
+	<p>
+		     During the summer of 2017 I participated in a research experience for undergraduates, funded by the National Science Foundation, in health informatics at Indiana University.
+		My project focused on designing an electronic toolkit specifically for older adults.
+		I assisted with participatory design workshops and analyzed results from previous sessions to gauge needs and interests of older adults.
+		I created an exemplar object to experiment with the electronics and modify the connections.
+		I assisted with the selection of the electronic components and modified them so that they would be easier for older adults to use.
+		We developed three different types of extensions for the LilyPad Arduino. At the ened of the summer, we tested the toolkit with college-aged students. 
+		Although college-aged students were not our target demographic we gathered useful information regarding the usability and difficulties when using the toolkit.
+	</p>
+	<p class="pad-short-bottom"></p>
+	<div class="container-gallery">
+  <img src="https://user-images.githubusercontent.com/28896529/32695668-1743b8e8-c730-11e7-9819-e1cb6f45665a.jpg" alt="Image of laser cut box with Arduino" class="image-gallery">
+  <div class="overlay">
+    <div class="text">Second Iteration with Underlaying Electronics</div>
+  </div>
+</div>
+<div class="container-gallery">
+  <img src="https://user-images.githubusercontent.com/28896529/32695678-4c40a15a-c730-11e7-9bc9-ead2beb345b4.png" alt="Third Iteration of Medication Box" class="image-gallery">
+  <div class="overlay">
+    <div class="text">Third Iteration of Medication Box</div>
+  </div>
+</div>
+	<div class="container-gallery">
+  <img src="https://user-images.githubusercontent.com/28896529/32695757-1d426336-c733-11e7-8658-9e8c1dcb7c8e.jpg" alt="Inside of Medication Box" class="image-gallery">
+  <div class="overlay">
+    <div class="text">Inner view of Medication Box</div>
+  </div>
+</div>
+		<div class="container-gallery">
+  <img src="https://user-images.githubusercontent.com/28896529/32695766-74357232-c733-11e7-86c6-bbf82f1cc6a1.jpg" alt="Underlaying Electronics of Medication Box" class="image-gallery">
+  <div class="overlay">
+    <div class="text">Embedded Electronics of Third Medication Box</div>
+  </div>
+</div>
+		<div class="container-gallery">
+  <img src="https://user-images.githubusercontent.com/28896529/32695774-d511d848-c733-11e7-9db1-d508009abc8f.png" alt="Fabric Extensions for LilyPad Arduino" class="image-gallery">
+  <div class="overlay">
+    <div class="text">Fabric Exetensions</div>
+  </div>
+</div>
+		<div class="container-gallery">
+  <img src="https://user-images.githubusercontent.com/28896529/32695782-19d3cb9e-c734-11e7-9615-6ea7cfba40be.png" alt="Fabric Extensions Full Kit" class="image-gallery">
+  <div class="overlay">
+    <div class="text">Fabric Extensions Full Kit</div>
+  </div>
+</div>
+			<div class="container-gallery">
+  <img src="https://user-images.githubusercontent.com/28896529/32695791-44030bf0-c734-11e7-8220-a3999e032ed6.jpg" alt="Magnet and Wire Extensions" class="image-gallery">
+  <div class="overlay">
+    <div class="text">Magnet and Wire Extensions</div>
+  </div>
+</div>
+			<div class="container-gallery">
+  <img src="https://user-images.githubusercontent.com/28896529/32695795-62fd617c-c734-11e7-9d66-f9a58635db6b.png" alt="Magnet and Wire Extensions Full Kit" class="image-gallery">
+  <div class="overlay">
+    <div class="text">Magnet and Wire Extensions Full Kit</div>
+  </div>
+</div>
+			<div class="container-gallery">
+  <img src="https://user-images.githubusercontent.com/28896529/32695797-8b9d1bd6-c734-11e7-8084-d0326cc0e4a4.png" alt="Magnet and Wire Extension Circuit" class="image-gallery">
+  <div class="overlay">
+    <div class="text">Magnet and Wire Extensions Circuit</div>
+  </div>
+</div>
+	
+	
+<h2 class=breakfloat>Penn Center for Women's Behavioral Wellness</h2>
+	<p id="rps">University of Pennsylvania - Summer 2015 and 2016</p>
+	<p>
+		  During the summers of 2015 and 2016 I was a research assistant at the Penn Center for Women's Behavioral Wellness under the Emily Hartshorne Mudd Summer Research Fellowship. 
+		I assisted on multiple protocols concerning female hormones and their effects on health.
+		Daily responsibilities included patient interviews, literature review, data entry, and data analysis.
+		Additionally I pursued an independent research project regarding the inclusion of sex and gender in the research plan of IRB approved protocols at the University of Pennsylvania.
+		I authored a manuscript of the results which has been published in <em>Biology of Sex Differences</em>.
+	</p>
+	
+<p class="pad-short-top"></p>
+<a name="contact-me"></a> 
+<h1> <strong> Contact Me</strong> </h1> 
+<div class="row">
+  <div class="column2">
+    <h2 class="ctr1">Contact Information</h2>
+    <p>Email:          aof7 at georgetown dot edu </p>
+    <a href="https://www.dropbox.com/s/ujj4naa2xo47usd/Resume_Freeman_Web.pdf?dl=0" class="button">View My Resume</a>
+  </div>
+  <div class="column2">
+		<h2 class="ctr1">
+			 Message Me
+		</h2>
+    <form>
+ <div class="form-group">
+    <label for="exampleInputName1">Name</label>
+    <input type="text" class="form-control" id="exampleInputName1" placeholder="Name">
+  </div>
+  <div class="form-email">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Email">
+  </div>
+  <div class="form-group">
+     <label>
+		<label for="exampleInputEmail1">Comment</label>
+  	<input type="text" class="form-control" placeholder="">
+     </label>
+  </div>  
+<input type="submit" value="Submit">
+</form>
+  </div>
+</div>
+</body>
+</html>
