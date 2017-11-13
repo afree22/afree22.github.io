@@ -1,1 +1,3 @@
-name: Anne Freeman
+name: Anne Freeman Personal Website
+gems:
+  - jekyll-seo-tag
