@@ -1,10 +1,281 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Anne Freeman</title>
-	{% seo %}
-	</head>
-	<body>
+<head>
+  <style>
+		
+/* Style the header */
+.header {
+    padding: 20px;
+	  position: relative;
+    text-align: center;
+    color: white;
+}
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #4286f4;
+}
+/* Style the topnav links */
+.topnav a {
+    float: left;
+	  font-family:'Times New Roman','Helvetica', 'Arial', 'Sans-Serif';
+	  font-size: 18px;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #8cb8ff;
+    color: black;
+}
+		
+		
+		
+		
+/* General CSS RUles */
+    body {
+    margin: 0 auto;
+    width: 70%;
+	  font-family:'Times New Roman','Helvetica', 'Arial', 'Sans-Serif';
+		}
+
+		p {
+    font-size: 1.2em;
+    line-height: 1.2em;
+    color: rgb(0, 0, 0);
+		}
+	
+		img {
+		max-width:100%
+		}
+		
+		h1{
+				font-size: 2.2em;
+			  text-align: center;
+		}
+		
+.ctr1{
+text-align: center;
+}
+
+.breakfloat
+{
+	padding-top: 2cm;
+	clear: left;
+}
+		
+.pad-short-bottom{padding-bottom: 2cm;}
+.pad-short-top{padding-top: 2cm;}
+		
+#rps{
+font-size: 1.4em;
+line-height: 1.4em;
+}
+
+/* CSS for Button */
+.button {
+    background-color: #4286f4;
+	  font-family:'Times New Roman','Helvetica', 'Arial', 'Sans-Serif';
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+}
+		
+		
+/* CSS for custom form */
+input[type=button], input[type=submit], input[type=reset] 
+{
+    background-color: #4286f4;
+	  font-family:'Times New Roman','Helvetica', 'Arial', 'Sans-Serif';
+    font-size: 18px;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+}
+input[type=text] 
+{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+/*CSS to create rounded Images*/
+		.roundImg {
+  border-radius: 50%;
+	padding: 25px;
+	box-sizing: border-box;
+}
+
+		
+		
+/*CSS for Text overlay on Images*/
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.center-left {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+		
+		
+/* Create three equal columns that floats next to each other */
+* {
+    box-sizing: border-box;
+}
+		
+.column1 {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+}
+
+.column2 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+		
+		
+/*CSS for Animated Cards*/
+#f1_container {
+	float:left;
+	text-align:center;
+  position: relative;
+  margin: 10px auto;
+  width: 600px;
+  height: 230px;
+  z-index: 1;
+}
+#f1_container {
+  perspective: 1000;
+}
+#f1_card {
+  width: 33.33%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 1.0s linear;
+}
+#f1_container:hover #f1_card {
+  transform: rotateY(180deg);
+  box-shadow: -5px 5px 5px #aaa;
+}
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+	border: 10px solid transparent;
+  padding: 15px;
+  -webkit-border-image: url(https://user-images.githubusercontent.com/28896529/32695379-08a8ee0a-c728-11e7-8ddd-64cda0bfb135.png) round; /* Safari 3.1-5 */
+  -o-border-image: url(https://user-images.githubusercontent.com/28896529/32695379-08a8ee0a-c728-11e7-8ddd-64cda0bfb135.png) round; /* Opera 11-12.1 */
+   border-image: url(https://user-images.githubusercontent.com/28896529/32695379-08a8ee0a-c728-11e7-8ddd-64cda0bfb135.png) round;
+   border-image-slice: 30%;
+  backface-visibility: hidden;
+}
+.face.back {
+  display: block;
+	vertical-align:middle;
+
+  transform: rotateY(180deg);
+	border: 8px solid #4286f4;
+  box-sizing: border-box;
+  padding: 10px;
+  color: white;
+}
+		
+		
+/* CSS for single repeated image as boarder*/
+.wreath {
+	  border: 10px solid transparent;
+    padding: 15px;
+    -webkit-border-image: url(https://user-images.githubusercontent.com/28896529/32695379-08a8ee0a-c728-11e7-8ddd-64cda0bfb135.png) round; /* Safari 3.1-5 */
+    -o-border-image: url(https://user-images.githubusercontent.com/28896529/32695379-08a8ee0a-c728-11e7-8ddd-64cda0bfb135.png) round; /* Opera 11-12.1 */
+    border-image: url(https://user-images.githubusercontent.com/28896529/32695379-08a8ee0a-c728-11e7-8ddd-64cda0bfb135.png) round;
+    border-image-slice: 30%;
+} 
+
+.blue-circle {
+	  border: 10px solid transparent;
+    padding: 15px;
+    -webkit-border-image: url(https://user-images.githubusercontent.com/28896529/32695440-1f01f5c8-c72a-11e7-949e-2494b3332ee3.png) round; /* Safari 3.1-5 */
+    -o-border-image: url(https://user-images.githubusercontent.com/28896529/32695440-1f01f5c8-c72a-11e7-949e-2494b3332ee3.png) round; /* Opera 11-12.1 */
+    border-image: url(https://user-images.githubusercontent.com/28896529/32695440-1f01f5c8-c72a-11e7-949e-2494b3332ee3.png) round;
+    border-image-slice: 20%;
+} 
+		
+/* CSS for Photo Gallery */
+.container-gallery {
+  position: relative;
+  width: 33.33%;
+	padding: 15px;
+  float:left
+}
+.image-gallery {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #4286f4;
+}
+.container-gallery:hover .overlay {
+  opacity: 1;
+}
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+	
+}
+		
+		
+</style>
+{% seo %}</head>
+<body>
+
 <div class="header">
   <img src="https://user-images.githubusercontent.com/28896529/32686045-a2507482-c66b-11e7-8493-8686c3802e8d.jpg" alt="Switzerland" width=100%>
 <div class="center-left"><h2>Anne Freeman<br>Computer Science<br>Georgetown University '19</h2></div>
@@ -202,5 +473,5 @@
 </form>
   </div>
 </div>
-	</body>
-		</html>
+</body>
+</html>
