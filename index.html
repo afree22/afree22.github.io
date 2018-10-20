@@ -3,6 +3,51 @@
 <head>
   <style>
 		
+/* Style for image gallery for DISC */
+div.gallery {
+    border: 1px solid #ccc;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
 /* Style the header */
 .header {
     padding: 20px;
@@ -300,19 +345,9 @@ input[type=text]
     <br />
     <br />
     <h1 > <strong>   About </strong> </h1>
-		<p>
+	<p style="margin-bottom:3cm;">
       I grew up in a small town in Western Massachusetts with my three siblings. I went to my local high school before heading off to Georgetown Univeristy where I am currently studying Computer Science. When I graduate, I am interested in working at a start-up where I can pursuing a career involving data analytics. 
     </p>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
 	</div>
 	
 <p class="pad-short-top"></p>
@@ -374,19 +409,25 @@ input[type=text]
         During the summer of 2018, I participated in the Data Intensive Scientific Computing REU at Notre Dame. I was placed in Dr. Michael Ferdig’s laboratory, which focuses on bioinformatics and malaria. I developed software in R to process malaria genomic data from a genetic cross (sequenced with Illumina Next Generation sequencing) and select genetically unique, clonal progeny with no missing data. I also developed an R software package to perform QTL analysis in a shared parent population (2 different crosses with one parent in common), based on the paper, <i> Joint QTL Linkage Mapping for Multiple-Cross Mating Design Sharing One Common Parent </i>. Using a shared parent population provides more phenotypic diversity and provides greater statistical power to detect genes with small effects. 
   </p>
 
-<p class="pad-short-bottom"></p>
-	<div class="container-gallery">
-  <img src="https://afree22.github.io/images/allData.png" alt="Heat Map of All of the Data" class="image-gallery">
-  <div class="overlay">
-    <div class="text">Heat map of all of the data. (green = missing, purple = non-clonal)</div>
+  <div class="responsive">
+  <div class="gallery">
+    <a target="_blank">
+      <img src="https://afree22.github.io/images/allData.png" alt="Heat Map of All of the Data" width="600" height="400">
+    </a>
+    <div class="desc">Heat map of all of the data. (green = missing, purple = non-clonal)</div>
   </div>
 </div>
-<div class="container-gallery">
-  <img src="https://afree22.github.io/images/noMissing.png" alt="Heat Map after removing progeny missing >= 50% of the markers" class="image-gallery">
-  <div class="overlay">
-    <div class="text"> Data after filtering out progeny missing >= 50% of markers</div>
+
+
+  <div class="responsive">
+  <div class="gallery">
+    <a target="_blank">
+      <img src="https://afree22.github.io/images/noMissing.png" alt="Heat Map after removing progeny missing >= 50% of the markers" width="600" height="400">
+    </a>
+    <div class="desc">Data after filtering out progeny missing >= 50% of markers</div>
   </div>
 </div>
+
 
 	<h2><br/>Health Informatics - Research Experience for Undergraduates (REU)</h2>
 	<h4>Indiana University - Summer 2017</h4>
